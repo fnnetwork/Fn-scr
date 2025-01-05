@@ -16,8 +16,8 @@ This Telegram bot is designed to scrape messages from different groups or channe
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/AnukarOP/BlackScrapper
-cd BlackScrapper
+https://github.com/fnnetwork/Fn-scr
+cd Fn-scr
 ```
 
 2. Install the required Python libraries:
