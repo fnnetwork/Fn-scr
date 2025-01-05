@@ -7,11 +7,11 @@ import asyncio
 from dotenv import dotenv_values
 
 env = dotenv_values(".env")
-api_id = env['api_id']
-api_hash = env['api_hash']
-phone_number = env['phone_number']
+api_id = env['24184946']
+api_hash = env['db7aa8593d6422dd3924f629d6cbe808']
+phone_number = env['+919334462399']
 
-client = TelegramClient('black_scrapper', api_id, api_hash)
+client = TelegramClient('OnlyAuth', api_id, api_hash)
 
 BIN_API_URL = 'https://bins.antipublic.cc/bins/{}'
 
@@ -41,7 +41,7 @@ async def anukarop(event):
     try:
         message = event.message
         # Regex to match approved messages
-        if re.search(r'(Approved!|Charged|authenticate_successful|𝗔𝗽𝗽𝗿𝗼𝘃𝗲𝗱|- 𝐀𝐩𝐩𝐫𝐨𝐯𝐞𝐝 ✅|APPROVED|New Cards Found By Scrapper|ꕥ Extrap [☭]|• New Cards Found By JennaS>)', message.text):
+        if re.search(r'(Approved!|Charged|authenticate_successful|𝗔𝗽𝗽𝗿𝗼𝘃𝗲𝗱|- 𝐀𝐩𝐩𝐫𝐨𝐯𝐞𝐝 ✅|APPROVED|New Cards Found By Scrapper|ꕥ Extrap [☭]|• New Cards Found By @FNxELECTRA>)', message.text):
             filtered_card_info = filter_cards(message.text)
             if not filtered_card_info:
                 return
@@ -66,18 +66,18 @@ async def anukarop(event):
                   
                     # Format the message
                     formatted_message = (
-                        f"**[-]**(t.me/blackheadsop) 𝐀𝐩𝐩𝐫𝗼𝐯𝗲𝐝 ✅\n\n"
-                        f"**[-]**(t.me/blackheadsop) 𝗖𝗮𝗿𝗱: `{card_info}`\n"
-                        f"**[-]**(t.me/blackheadsop) 𝐆𝐚𝐭𝐞𝐰𝐚𝐲: Braintree Auth 4\n"
-                        f"**[-]**(t.me/blackheadsop) 𝐑𝐞𝐬𝗽𝗼𝐧𝐬𝗲: `1000: Approved`\n\n"
-                        f"**[-]**(t.me/blackheadsop) 𝗜𝗻𝗳𝗼: {brand} - {card_type} - {level}\n"
-                        f"**[-]**(t.me/blackheadsop) 𝐈𝐬𝐬𝐮𝐞𝐫: {bank}\n"
-                        f"**[-]**(t.me/blackheadsop) 𝐂𝗼𝐮𝐧𝐭𝐫𝐲: {country} {country_flag}\n\n"
+                        f"**[-]**(t.me/fn_network_back) 𝐀𝐩𝐩𝐫𝗼𝐯𝗲𝐝 ✅\n\n"
+                        f"**[-]**(t.me/fn_network_back) 𝗖𝗮𝗿𝗱: `{card_info}`\n"
+                        f"**[-]**(t.me/fn_network_back) 𝐆𝐚𝐭𝐞𝐰𝐚𝐲: Braintree Auth 4\n"
+                        f"**[-]**(t.me/fn_network_back) 𝐑𝐞𝐬𝗽𝗼𝐧𝐬𝗲: `1000: Approved`\n\n"
+                        f"**[-]**(t.me/fn_network_back) 𝗜𝗻𝗳𝗼: {brand} - {card_type} - {level}\n"
+                        f"**[-]**(t.me/fn_network_back) 𝐈𝐬𝐬𝐮𝐞𝐫: {bank}\n"
+                        f"**[-]**(t.me/fn_network_back) 𝐂𝗼𝐮𝐧𝐭𝐫𝐲: {country} {country_flag}\n\n"
                         f"𝗧𝗶𝗺𝗲: {formatted_time_taken}"
                     )
 
                     # Send the formatted message
-                    await client.send_message('blackheadscc', formatted_message, link_preview=False)
+                    await client.send_message('fn_only_approved', formatted_message, link_preview=False)
                     await asyncio.sleep(30)  # Wait for 30 seconds before sending the next message
     except Exception as e:
         print(e)
